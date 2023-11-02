@@ -24,6 +24,13 @@ namespace DemoDatabaseFirst
                 Console.WriteLine($"{product.ProductId} - {product.ProductName}" +
                     $" - {product.UnitPrice} - {product.UnitsInStock} - {product.Category.CategoryName}");
             }
+            Console.WriteLine();
+            var list_productByPrice = context.Products.Where(p => p.UnitPrice < 100000).OrderByDescending(p => p.ProductName).ToList();
+            foreach (var product in list_productByPrice)
+            {
+                Console.WriteLine($"{product.ProductId} - {product.ProductName}" +
+                    $" - {product.UnitPrice} - {product.UnitsInStock} - {product.Category.CategoryName}");
+            }
         }
     }
 }
