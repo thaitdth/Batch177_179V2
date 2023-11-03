@@ -8,16 +8,19 @@ namespace DemoCodeFirst
 {
     public class Program
     {
-        public static void Main(string[] args) 
+        private ICategoryRepository _categoryRepository = null;
+        public Program() { _categoryRepository = new CategoryRepository(); }
+        public static void Main(string[] args)
         {
-            GetListCategory();
-            Console.WriteLine("-------------------------------------");
-            Console.WriteLine("Insert new category: ");
+            Program p = new Program();
+            p.GetListCategory();
+            Console.WriteLine("---------------------");
+            Console.WriteLine("Insert new Category: ");
             Category category = new Category();
             category.CategoryName = GetString("Input Category Name: ");
-            CategoryDao.Instance.Insert(category);
-            GetListCategory();
-            Console.WriteLine("-------------------------------------");
+            p._categoryRepository.Insert(category);
+            p.GetListCategory();
+            Console.WriteLine("---------------------");
             Console.WriteLine("Update Category: ");
             int id = GetInt("Input Id: ");
             if (CategoryDao.Instance.CheckCategoryID(id))
@@ -25,22 +28,34 @@ namespace DemoCodeFirst
                 category.CategoryID = id;
                 category.CategoryName = GetString("Input Category Name: ");
             }
-            CategoryDao.Instance.Update(category);
-            GetListCategory();
+            p._categoryRepository.Update(category);
+            p.GetListCategory();
+            /*Console.WriteLine("---------------------");
+            Console.WriteLine("Delete Category: ");
+            id = GetInt("Input Id: ");
+            if (p._categoryRepository.CheckCategoryID(id))
+            {
+                category.CategoryID = id;
+            }
+            p._categoryRepository.Delete(category);
+            p.GetListCategory();*/
         }
-        public static int GetInt(string mess)
+
+        public static int GetInt(string mes)
         {
-            Console.WriteLine(mess);
+            Console.WriteLine(mes);
             return Convert.ToInt32(Console.ReadLine());
         }
-        public static void GetListCategory()
+
+        public void GetListCategory()
         {
-            Console.WriteLine("Get List of Category:");
-            foreach (var i in CategoryDao.Instance.GetCategories())
+            Console.WriteLine("Get list of Category: ");
+            foreach (var i in _categoryRepository.GetAll())
             {
-                Console.WriteLine($"{i.CategoryID} - {i.CategoryName}");
+                Console.WriteLine($"{i.CategoryID}-{i.CategoryName}");
             }
         }
+
         public static string GetString(string mes)
         {
             Console.WriteLine(mes);

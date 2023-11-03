@@ -81,5 +81,19 @@ namespace DemoCodeFirst
                 throw new Exception(ex.Message);
             }
         }
+        public void Delete (Category category)
+        {
+            try
+            {
+                using MyStockDBContext stock = new MyStockDBContext();
+                var cate = stock.Categories.SingleOrDefault(c => c.CategoryID == category.CategoryID);
+                stock.Remove(cate);
+                stock.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }
