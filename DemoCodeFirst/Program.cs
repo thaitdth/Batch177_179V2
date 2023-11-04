@@ -30,7 +30,7 @@ namespace DemoCodeFirst
             }
             p._categoryRepository.Update(category);
             p.GetListCategory();
-            /*Console.WriteLine("---------------------");
+            Console.WriteLine("---------------------");
             Console.WriteLine("Delete Category: ");
             id = GetInt("Input Id: ");
             if (p._categoryRepository.CheckCategoryID(id))
@@ -38,7 +38,7 @@ namespace DemoCodeFirst
                 category.CategoryID = id;
             }
             p._categoryRepository.Delete(category);
-            p.GetListCategory();*/
+            p.GetListCategory();
         }
 
         public static int GetInt(string mes)
