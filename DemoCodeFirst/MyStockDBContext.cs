@@ -14,6 +14,7 @@ namespace DemoCodeFirst
         public DbSet<Person> People { get; set; }
         public DbSet<Email> Emails { get; set; }
         public DbSet<Company> Companies { get; set; }
+        public DbSet<Contact> Contacts { get; set; }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var builder = new ConfigurationBuilder()

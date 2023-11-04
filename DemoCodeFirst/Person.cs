@@ -13,5 +13,6 @@ namespace DemoCodeFirst
         public string Name { get; set; }
         public ICollection<Email> Emails { get; set; }
         public ICollection<Company> Companies { get; set; }
+        public virtual Contact Contact { get; set; }
     }
 }
