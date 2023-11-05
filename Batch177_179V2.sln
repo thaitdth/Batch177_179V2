@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoDatabaseFirst", "DemoDa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstDemoFramework", "CodeFirstDemoFramework\CodeFirstDemoFramework.csproj", "{49956495-A315-46C7-B03F-27F215CFE2F5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirst", "DemoCodeFirst\DemoCodeFirst.csproj", "{8B9D0F2A-27C4-4198-B9AE-45DBF8505718}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DemoCodeFirst", "DemoCodeFirst\DemoCodeFirst.csproj", "{8B9D0F2A-27C4-4198-B9AE-45DBF8505718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoCodeFirstEDM", "DemoCodeFirstEDM\DemoCodeFirstEDM.csproj", "{6F7E6880-753B-46EA-91C7-F943DB2D26F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{8B9D0F2A-27C4-4198-B9AE-45DBF8505718}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B9D0F2A-27C4-4198-B9AE-45DBF8505718}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B9D0F2A-27C4-4198-B9AE-45DBF8505718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F7E6880-753B-46EA-91C7-F943DB2D26F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F7E6880-753B-46EA-91C7-F943DB2D26F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F7E6880-753B-46EA-91C7-F943DB2D26F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F7E6880-753B-46EA-91C7-F943DB2D26F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
